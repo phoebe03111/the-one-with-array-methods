@@ -1,0 +1,52 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+nav {
+  @include section-padding;
+  background-color: $bg-color-tan;
+  position: relative;
+}
+
+.category {
+  &__list {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+    width: fit-content;
+    cursor: pointer;
+
+    &:hover {
+      color: $secondary-color;
+      font-weight: 800;
+    }
+  }
+
+  &__item {
+    margin-left: 1rem;
+    color: $primary-color;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.collapse-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.3rem;
+  color: $primary-color;
+  cursor: pointer;
+}

@@ -1,7 +1,32 @@
-.friends {
-  &__statement {
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+header {
+  @include section-padding;
+}
+
+.site-logo {
+  color: $primary-color;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.friends-font {
+  font-family: "Friends";
+  letter-spacing: 1.5px;
+}
+
+.friends-statement {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__left {
     display: flex;
     align-items: center;
+    margin-right: 0.5rem;
   }
 
   &__img {

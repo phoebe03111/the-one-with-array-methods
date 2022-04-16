@@ -6,6 +6,7 @@ import Push from "../../components/Methods/Push/Push";
 import Unshift from "../../components/Methods/Unshift/Unshift";
 import Pop from "../../components/Methods/Pop/Pop";
 import Shift from "../../components/Methods/Shift/Shift";
+import "./HomePage.scss";
 
 function HomePage() {
   const { method } = useParams();
@@ -15,11 +16,12 @@ function HomePage() {
       <Header />
       <main>
         <ArrayNav />
-        {method === "push" && <Push />}
-        {method === "unshift" && <Unshift />}
-        {method === "pop" && <Pop />}
-        {method === "shift" && <Shift />}
-       
+        <section className="method">
+          {method === "push" && <Push />}
+          {method === "unshift" && <Unshift />}
+          {method === "pop" && <Pop />}
+          {method === "shift" && <Shift />}
+        </section>
       </main>
     </div>
   );

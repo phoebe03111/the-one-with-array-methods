@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Push.scss";
 
 function Push() {
   const [checkAnswer1, setCheckAnswer1] = useState(false);
@@ -18,8 +19,8 @@ function Push() {
   };
 
   return (
-    <section>
-      <h2>push()</h2>
+    <>
+      <h2 className="method__title">push()</h2>
       <p>will add element(s) to the end of an array</p>
       <p>will alter the original array</p>
       <p>and will return the length of the new array</p>
@@ -42,7 +43,7 @@ function Push() {
           ['Ross', 'Rachel', "Phoebe", "Joey", "Monica", "Chandler", "Janice"]
         </p>
       )}
-    </section>
+    </>
   );
 }
 

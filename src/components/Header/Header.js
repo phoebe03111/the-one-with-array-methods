@@ -5,15 +5,25 @@ import "./Header.scss";
 
 function Header() {
   return (
-    <div>
+    <header>
       <Link to="/">
-        <h1>The One With The Array Methods</h1>
+        <h1 className="site-logo">
+          The One With The <span className="friends-font">Array Methods</span>
+        </h1>
       </Link>
-      <p className="friends__statement">
-        const <img src={friendsImg} alt="friends" className="friends__img" /> =
-        ['Ross', 'Rachel', "Phoebe", "Joey", "Monica", "Chandler"]
-      </p>
-    </div>
+      <div className="friends-statement">
+        <p className="friends-statement__left">
+          const{" "}
+          <img
+            src={friendsImg}
+            alt="friends"
+            className="friends-statement__img"
+          />{" "}
+          =
+        </p>
+        <p> ['Ross', 'Rachel', "Phoebe", "Joey", "Monica", "Chandler"] </p>
+      </div>
+    </header>
   );
 }
 

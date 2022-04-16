@@ -1,0 +1,11 @@
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/typography" as *;
+@use "../../../styles/partials/variables" as *;
+
+.method {
+  &__title {
+      font-size: 1.5rem;
+    // font-family: "Friends Font";
+    // letter-spacing: 1px;
+  }
+}

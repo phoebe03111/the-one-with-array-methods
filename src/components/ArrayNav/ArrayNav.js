@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { AiOutlinePlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
+import "./ArrayNav.scss";
 
 const methods = [
   "push",
@@ -66,73 +68,127 @@ function ArrayNav() {
     setShowCategory7((prev) => !prev);
   };
 
+  const handleCollapse = () => {
+    setShowCategory1(false);
+    setShowCategory2(false);
+    setShowCategory3(false);
+    setShowCategory4(false);
+    setShowCategory5(false);
+    setShowCategory6(false);
+    setShowCategory7(false);
+  };
+
   return (
     <nav>
-      <ul>
+      <ul className="category__list">
         {/* 1. Add / Remove elements */}
-        <li onClick={handleSelectCategory1}>Add/Remove elements</li>
+        <li className="category__title" onClick={handleSelectCategory1}>
+          <AiOutlinePlusCircle /> Add/Remove elements
+        </li>
         {showCategory1 &&
           methods.slice(0, 5).map((method) => (
-            <li key={method} onClick={() => handleSelectMethod(method)}>
+            <li
+              className="category__item"
+              key={method}
+              onClick={() => handleSelectMethod(method)}
+            >
               {method}
             </li>
           ))}
 
         {/* 2. Manipulating elements */}
-        <li onClick={handleSelectCategory2}>Manipulate elements</li>
+        <li className="category__title" onClick={handleSelectCategory2}>
+          <AiOutlinePlusCircle /> Manipulate elements
+        </li>
         {showCategory2 &&
           methods.slice(5, 7).map((method) => (
-            <li key={method} onClick={() => handleSelectMethod(method)}>
+            <li
+              className="category__item"
+              key={method}
+              onClick={() => handleSelectMethod(method)}
+            >
               {method}
             </li>
           ))}
 
         {/* 3. Iterate over elements */}
-        <li onClick={handleSelectCategory3}>Iterate over elements</li>
+        <li className="category__title" onClick={handleSelectCategory3}>
+          <AiOutlinePlusCircle /> Iterate over elements
+        </li>
         {showCategory3 &&
           methods.slice(7, 10).map((method) => (
-            <li key={method} onClick={() => handleSelectMethod(method)}>
+            <li
+              className="category__item"
+              key={method}
+              onClick={() => handleSelectMethod(method)}
+            >
               {method}
             </li>
           ))}
 
         {/* 4. Search for elements */}
-        <li onClick={handleSelectCategory4}>Search for elements</li>
+        <li className="category__title" onClick={handleSelectCategory4}>
+          <AiOutlinePlusCircle /> Search for elements
+        </li>
         {showCategory4 &&
           methods.slice(10, 14).map((method) => (
-            <li key={method} onClick={() => handleSelectMethod(method)}>
+            <li
+              className="category__item"
+              key={method}
+              onClick={() => handleSelectMethod(method)}
+            >
               {method}
             </li>
           ))}
 
         {/* 5. Re-order elements */}
-        <li onClick={handleSelectCategory5}>Re-order elements</li>
+        <li className="category__title" onClick={handleSelectCategory5}>
+          <AiOutlinePlusCircle /> Re-order elements
+        </li>
         {showCategory5 &&
           methods.slice(14, 16).map((method) => (
-            <li key={method} onClick={() => handleSelectMethod(method)}>
+            <li
+              className="category__item"
+              key={method}
+              onClick={() => handleSelectMethod(method)}
+            >
               {method}
             </li>
           ))}
 
         {/* 6. Convert elements */}
-        <li onClick={handleSelectCategory6}>Convert elements</li>
+        <li className="category__title" onClick={handleSelectCategory6}>
+          <AiOutlinePlusCircle /> Convert elements
+        </li>
         {showCategory6 &&
           methods.slice(16, 19).map((method) => (
-            <li key={method} onClick={() => handleSelectMethod(method)}>
+            <li
+              className="category__item"
+              key={method}
+              onClick={() => handleSelectMethod(method)}
+            >
               {method}
             </li>
           ))}
 
         {/* 7. Reduce elements to one single value*/}
-        <li onClick={handleSelectCategory7}>
-          Reduce elements to one single value
+        <li className="category__title" onClick={handleSelectCategory7}>
+          <AiOutlinePlusCircle /> Reduce elements to one single value
         </li>
         {showCategory7 &&
           methods.slice(19, 20).map((method) => (
-            <li key={method} onClick={() => handleSelectMethod(method)}>
+            <li
+              className="category__item"
+              key={method}
+              onClick={() => handleSelectMethod(method)}
+            >
               {method}
             </li>
           ))}
+
+        <div className="collapse-btn" onClick={handleCollapse}>
+          <AiOutlineMinusCircle />
+        </div>
       </ul>
     </nav>
   );
