@@ -19,6 +19,7 @@ function HomePage() {
         {method === "unshift" && <Unshift />}
         {method === "pop" && <Pop />}
         {method === "shift" && <Shift />}
+       
       </main>
     </div>
   );
