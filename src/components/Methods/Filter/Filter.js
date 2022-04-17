@@ -19,7 +19,7 @@ function Filter() {
   };
 
   return (
-    <>
+    <div className="method__container">
       <h2 className="method__title">filter()</h2>
       <section className="method__section">
         <p>
@@ -65,7 +65,7 @@ function Filter() {
           </p>
         )}
       </section>
-    </>
+    </div>
   );
 }
 

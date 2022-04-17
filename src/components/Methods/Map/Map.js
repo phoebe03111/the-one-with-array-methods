@@ -19,7 +19,7 @@ function Map() {
   };
 
   return (
-    <>
+    <div className="method__container">
       <h2 className="method__title">map()</h2>
       <section className="method__section">
         <p>- Performs a callback function on each item</p>
@@ -29,7 +29,7 @@ function Map() {
 
       <section className="method__section">
         <h3 className="method__question">
-          Friends are THE BEST show ever! Let's make them all uppercase.
+          Friends are THE BEST show ever! Let's make their names all uppercase.
         </h3>
         <input />
         <button onClick={handleCheckAnswer1}>Show answer</button>
@@ -63,7 +63,7 @@ function Map() {
           </p>
         )}
       </section>
-    </>
+    </div>
   );
 }
 

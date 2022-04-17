@@ -19,7 +19,7 @@ function Pop() {
   };
 
   return (
-    <>
+    <div className="method__container">
       <h2 className="method__title">pop()</h2>
       <section className="method__section">
         <p>- Removes the last element from an array</p>
@@ -56,7 +56,7 @@ function Pop() {
           </p>
         )}
       </section>
-    </>
+    </div>
   );
 }
 

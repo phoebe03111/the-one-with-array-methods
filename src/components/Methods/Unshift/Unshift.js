@@ -19,7 +19,7 @@ function Unshift() {
   };
 
   return (
-    <>
+    <div className="method__container">
       <h2 className="method__title">unshift()</h2>
       <section className="method__section">
         <p>- Adds element(s) to the beginning of an array</p>
@@ -59,7 +59,7 @@ function Unshift() {
           </p>
         )}
       </section>
-    </>
+    </div>
   );
 }
 

@@ -19,7 +19,7 @@ function Push() {
   };
 
   return (
-    <>
+    <div className="method__container">
       <h2 className="method__title">push()</h2>
       <section className="method__section">
         <p>- Adds element(s) to the end of an array</p>
@@ -58,7 +58,7 @@ function Push() {
           </p>
         )}
       </section>
-    </>
+    </div>
   );
 }
 

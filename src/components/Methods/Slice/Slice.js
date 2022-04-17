@@ -19,7 +19,7 @@ function Slice() {
   };
 
   return (
-    <>
+    <div className="method__container">
       <h2 className="method__title">slice()</h2>
       <section className="method__section">
         <p className="method__hint">
@@ -66,7 +66,7 @@ function Slice() {
           </p>
         )}
       </section>
-    </>
+    </div>
   );
 }
 

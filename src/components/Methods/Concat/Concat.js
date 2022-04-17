@@ -19,7 +19,7 @@ function Concat() {
   };
 
   return (
-    <>
+    <div className="method__container">
       <h2 className="method__title">concat()</h2>
       <section className="method__section">
         <p>- Is used to merge two or more arrays</p>
@@ -64,7 +64,7 @@ function Concat() {
           </p>
         )}
       </section>
-    </>
+    </div>
   );
 }
 

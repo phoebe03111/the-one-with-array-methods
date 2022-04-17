@@ -19,7 +19,7 @@ function Find() {
   };
 
   return (
-    <>
+    <div className="method__container">
       <h2 className="method__title">find()</h2>
       <section className="method__section">
         <p>
@@ -63,7 +63,7 @@ function Find() {
           </p>
         )}
       </section>
-    </>
+    </div>
   );
 }
 

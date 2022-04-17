@@ -19,7 +19,7 @@ function Splice() {
   };
 
   return (
-    <>
+    <div className="method__container">
       <h2 className="method__title">splice()</h2>
       <section className="method__section">
         <p>
@@ -62,7 +62,7 @@ function Splice() {
           </p>
         )}
       </section>
-    </>
+    </div>
   );
 }
 

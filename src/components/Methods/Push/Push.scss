@@ -4,6 +4,10 @@
 @use "../../../styles/partials/variables" as *;
 
 .method {
+  &__container {
+    animation: fadeInUp .8s;
+  }
+
   &__title {
     font-size: 1.5rem;
     font-weight: 700;

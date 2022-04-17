@@ -19,7 +19,7 @@ function FindIndex() {
   };
 
   return (
-    <>
+    <div className="method__container">
       <h2 className="method__title">findIndex()</h2>
       <section className="method__section">
         <p>
@@ -62,7 +62,7 @@ function FindIndex() {
           </p>
         )}
       </section>
-    </>
+    </div>
   );
 }
 

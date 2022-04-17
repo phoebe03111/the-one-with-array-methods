@@ -19,7 +19,7 @@ function Includes() {
   };
 
   return (
-    <>
+    <div className="method__container">
       <h2 className="method__title">includes()</h2>
       <section className="method__section">
         <p>- Check if an array has a certain value among its entries</p>
@@ -57,7 +57,7 @@ function Includes() {
           </p>
         )}
       </section>
-    </>
+    </div>
   );
 }
 

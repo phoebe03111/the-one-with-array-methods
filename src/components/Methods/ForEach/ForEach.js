@@ -19,7 +19,7 @@ function ForEach() {
   };
 
   return (
-    <>
+    <div className="method__container">
       <h2 className="method__title">forEach()</h2>
       <section className="method__section">
         <p>- Performs a callback function on each item</p>
@@ -63,7 +63,7 @@ function ForEach() {
           </p>
         )}
       </section>
-    </>
+    </div>
   );
 }
 
