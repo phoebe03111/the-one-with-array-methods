@@ -15,6 +15,7 @@ import ForEach from "../../components/Methods/ForEach/ForEach";
 import Filter from "../../components/Methods/Filter/Filter";
 import Find from "../../components/Methods/Find/Find";
 import FindIndex from "../../components/Methods/FindIndex/FindIndex";
+import Includes from "../../components/Methods/Includes/Includes";
 
 function HomePage() {
   const { method } = useParams();
@@ -36,6 +37,7 @@ function HomePage() {
           {method === "filter" && <Filter />}
           {method === "find" && <Find />}
           {method === "findIndex" && <FindIndex />}
+          {method === "includes" && <Includes />}
         </section>
         <ArrayNav />
       </main>
