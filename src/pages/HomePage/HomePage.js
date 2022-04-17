@@ -7,6 +7,7 @@ import Unshift from "../../components/Methods/Unshift/Unshift";
 import Pop from "../../components/Methods/Pop/Pop";
 import Shift from "../../components/Methods/Shift/Shift";
 import "./HomePage.scss";
+import Concat from "../../components/Methods/Concat/Concat";
 
 function HomePage() {
   const { method } = useParams();
@@ -20,6 +21,7 @@ function HomePage() {
           {method === "unshift" && <Unshift />}
           {method === "pop" && <Pop />}
           {method === "shift" && <Shift />}
+          {method === "concat" && <Concat />}
         </section>
         <ArrayNav />
       </main>
