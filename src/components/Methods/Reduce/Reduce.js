@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function Reduce() {
@@ -18,18 +19,18 @@ function Reduce() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "reduce(callbackFn, initialValue)",
+    'reduce((prevValue, currValue) => ...)',
+    "Returns a single value that the function accumulated",
+    "Will NOT alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">reduce()</h2>
       <section className="method__section">
-        <p className="method__hint">
-          <strong>-reduce(callbackFn, initialValue)</strong>
-        </p>
-        <p className="method__hint">
-          <strong>-reduce((prevValue, currValue) ={">"} ...)</strong>
-        </p>
-        <p>- Returns a single value that the function accumulated</p>
-        <p>- Will NOT alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">

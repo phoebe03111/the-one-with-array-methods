@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function Filter() {
@@ -18,15 +19,16 @@ function Filter() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "Returns a new array with all elements that pass the test provided by a function",
+    "Will NOT alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">filter()</h2>
       <section className="method__section">
-        <p>
-          - Returns a new array with all elements that pass the test provided by
-          a function
-        </p>
-        <p>- Will NOT alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">

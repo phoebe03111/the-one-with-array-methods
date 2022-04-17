@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function FindIndex() {
@@ -18,16 +19,17 @@ function FindIndex() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "Returns the index of the FIRST element in the array that satisfies the provided testing function",
+    "Returns -1 if no values satisfy the testing function",
+    "Will NOT alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">findIndex()</h2>
       <section className="method__section">
-        <p>
-          - Returns the <strong>index</strong> of the <strong>FIRST</strong>{" "}
-          element in the array that satisfies the provided testing function
-        </p>
-        <p>(- Returns -1 if no values satisfy the testing function)</p>
-        <p>- Will NOT alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">

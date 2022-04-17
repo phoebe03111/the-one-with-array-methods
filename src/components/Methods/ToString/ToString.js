@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function ToString() {
@@ -18,12 +19,16 @@ function ToString() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "Returns a new string representing the elements of an array",
+    "Will NOT alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">toString()</h2>
       <section className="method__section">
-        <p>- Returns a new string representing the elements of an array</p>
-        <p>- Will NOT alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">

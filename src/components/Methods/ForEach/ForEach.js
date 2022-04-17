@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function ForEach() {
@@ -18,18 +19,23 @@ function ForEach() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "Performs a callback function on each item",
+    "Does NOT return anything (the only difference with map() method!)",
+    "Will NOT alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">forEach()</h2>
       <section className="method__section">
-        <p>- Performs a callback function on each item</p>
-        <p>- Does NOT return anything (the only difference with map() method!)</p>
-        <p>- Will NOT alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">
         <h3 className="method__question">
-          Who doesn't love to be a Geller? Let's add a lastname "Geller" to each person in the array.
+          Who doesn't love to be a Geller? Let's add a lastname "Geller" to each
+          person in the array.
         </h3>
         <input />
         <button onClick={handleCheckAnswer1}>Show answer</button>
@@ -45,11 +51,7 @@ function ForEach() {
         <p className="method__hint">console.log(friends.forEach(...))</p>
         <input />
         <button onClick={handleCheckAnswer2}>Show answer</button>
-        {checkAnswer2 && (
-          <p className="method__answer">
-            undefined
-          </p>
-        )}
+        {checkAnswer2 && <p className="method__answer">undefined</p>}
       </section>
 
       <section className="method__section">

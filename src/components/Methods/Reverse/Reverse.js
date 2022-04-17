@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function Reverse() {
@@ -18,18 +19,23 @@ function Reverse() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "Reverses the order of the elements in an array",
+    "Returns the reversed array",
+    "Will alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">reverse()</h2>
       <section className="method__section">
-        <p>- Reverses the order of the elements in an array</p>
-        <p>- Returns the reversed array</p>
-        <p>- Will alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">
         <h3 className="method__question">
-          Rachel and Ross are fighting again ("WE WERE ON A BREAK!!!"). 🙄 Reverse the order and move them to the end of the array.
+          Rachel and Ross are fighting again ("WE WERE ON A BREAK!!!"). 🙄
+          Reverse the order and move them to the end of the array.
         </h3>
         <input />
         <button onClick={handleCheckAnswer1}>Show answer</button>

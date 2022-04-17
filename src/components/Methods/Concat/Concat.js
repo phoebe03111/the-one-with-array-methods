@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function Concat() {
@@ -17,14 +18,17 @@ function Concat() {
   const handleCheckAnswer3 = () => {
     setCheckAnswer3((prev) => !prev);
   };
+  const notes = [
+    "Is used to merge two or more arrays",
+    "Returns a new array containing the joined array",
+    "Will NOT alter the original array",
+  ];
 
   return (
     <div className="method__container">
       <h2 className="method__title">concat()</h2>
       <section className="method__section">
-        <p>- Is used to merge two or more arrays</p>
-        <p>- Returns a new array containing the joined array</p>
-        <p>- Will NOT alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">

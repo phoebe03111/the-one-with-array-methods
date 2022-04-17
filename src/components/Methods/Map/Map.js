@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function Map() {
@@ -18,13 +19,17 @@ function Map() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "Performs a callback function on each item",
+    "Returns a new array with the results",
+    "Will NOT alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">map()</h2>
       <section className="method__section">
-        <p>- Performs a callback function on each item</p>
-        <p>- Returns a new array with the results</p>
-        <p>- Will NOT alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">

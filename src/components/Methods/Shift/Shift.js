@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function Shift() {
@@ -18,13 +19,17 @@ function Shift() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "Removes the first element from an array",
+    "Returns the removed element",
+    "Will alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">shift()</h2>
       <section className="method__section">
-        <p>- Removes the first element from an array</p>
-        <p>- Returns the removed element</p>
-        <p>- Will alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">

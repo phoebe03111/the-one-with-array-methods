@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function Pop() {
@@ -18,13 +19,17 @@ function Pop() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "Removes the last element from an array",
+    "Returns the removed element",
+    "Will Alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">pop()</h2>
       <section className="method__section">
-        <p>- Removes the last element from an array</p>
-        <p>- Returns the removed element</p>
-        <p>- Will Alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">

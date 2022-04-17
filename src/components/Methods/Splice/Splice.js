@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function Splice() {
@@ -18,19 +19,17 @@ function Splice() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "Changes the content of an array by removing or replacing existing elements, and/or adding new elements in place",
+    "Returns an array containing the added element / removed element, or an empty array if nothing is removed",
+    "Will alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">splice()</h2>
       <section className="method__section">
-        <p>
-          - Changes the content of an array by removing or replacing existing
-          elements, and/or adding new elements in place
-        </p>
-        <p>
-          - Returns an array containing the added element / removed element, or
-          an empty array if nothing is removed
-        </p>
-        <p>- Will alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function Split() {
@@ -18,16 +19,17 @@ function Split() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "It's a string method that splits a string into an array of substrings",
+    "Returns a new array",
+    "Will NOT alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">split()</h2>
       <section className="method__section">
-        <p>
-          - It's a <strong>string method</strong> that splits a string into an
-          array of substrings
-        </p>
-        <p>- Returns a new array</p>
-        <p>- Will NOT alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">
@@ -55,11 +57,7 @@ function Split() {
         <p className="method__hint">console.log(show)</p>
         <input />
         <button onClick={handleCheckAnswer3}>Show answer</button>
-        {checkAnswer3 && (
-          <p className="method__answer">
-            "Days-Of-Our-Lives"
-          </p>
-        )}
+        {checkAnswer3 && <p className="method__answer">"Days-Of-Our-Lives"</p>}
       </section>
     </div>
   );

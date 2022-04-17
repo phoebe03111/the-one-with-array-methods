@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function Join() {
@@ -18,16 +19,17 @@ function Join() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "Concatenating all of the elements in an array into a string, seperated by commas or a specified seperator string",
+    "Returns a new string",
+    "Will NOT alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">join()</h2>
       <section className="method__section">
-        <p>
-          - Concatenating all of the elements in an array into a string,
-          seperated by commas or a specified seperator string
-        </p>
-        <p>- Returns a new string</p>
-        <p>- Will NOT alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">

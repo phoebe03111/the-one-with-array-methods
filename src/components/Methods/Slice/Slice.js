@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function Slice() {
@@ -18,20 +19,18 @@ function Slice() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "slice(startIndex, endIndex)",
+    "Makes a copy of the array from startIndex (inclusive) to endIndex (exclusive). If endIndex is not specified, it wll copy to the lastindex of the array",
+    "Returns a 'selection of array' from startIndex to endIndex",
+    "Will NOT alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">slice()</h2>
       <section className="method__section">
-        <p className="method__hint">
-          -<strong>slice(startIndex, endIndex)</strong>
-        </p>
-        <p>
-          - Makes a copy of the array from startIndex (inclusive) to endIndex
-          (exclusive). If endIndex is not specified, it wll copy to the last
-          index of the array
-        </p>
-        <p>- Returns a "selection of array" from startIndex to endIndex</p>
-        <p>- Will NOT alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">

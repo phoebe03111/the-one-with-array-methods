@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function Sort() {
@@ -18,21 +19,18 @@ function Sort() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "By default, the sort() function sorts values as strings and the order is ascending",
+    "To sort numbers, we can provide a compare function((a,b) => a-b); we can also use it to sort an array descending",
+    "Returns the sorted array",
+    "Will alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">sort()</h2>
       <section className="method__section">
-        <p>
-          - By default, the sort() function sorts values as strings and the
-          order is ascending
-        </p>
-        <p>
-          - To sort numbers, we can provide a <strong>compare function</strong>{" "}
-          ((a,b) ={">"}
-          a-b); we can also use it to sort an array descending
-        </p>
-        <p>- Returns the sorted array</p>
-        <p>- Will alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">

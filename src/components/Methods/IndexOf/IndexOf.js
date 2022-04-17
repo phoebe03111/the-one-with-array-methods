@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function IndexOf() {
@@ -18,22 +19,23 @@ function IndexOf() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "Returns the first index of a specified value in an array",
+    "Returns true or false",
+    "Will NOT alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">indexOf()</h2>
       <section className="method__section">
-        <p>
-          - Returns the <strong> first index</strong> of a specified value in an
-          array
-        </p>
-        <p>- Returns true or false</p>
-        <p>- Will NOT alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">
         <h3 className="method__question">
-          Monica is pissed that Joey made a big mess in her kitchen! Let's find out
-          where Joey is.
+          Monica is pissed that Joey made a big mess in her kitchen! Let's find
+          out where Joey is.
         </h3>
         <input />
         <button onClick={handleCheckAnswer1}>Show answer</button>

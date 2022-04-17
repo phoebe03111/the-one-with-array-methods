@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
 
 function Includes() {
@@ -18,13 +19,17 @@ function Includes() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "Check if an array has a certain value among its entries",
+    "Returns true or false",
+    "Will NOT alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">includes()</h2>
       <section className="method__section">
-        <p>- Check if an array has a certain value among its entries</p>
-        <p>- Returns true or false</p>
-        <p>- Will NOT alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">
