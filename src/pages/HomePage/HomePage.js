@@ -11,6 +11,7 @@ import Concat from "../../components/Methods/Concat/Concat";
 import Splice from "../../components/Methods/Splice/Splice";
 import Slice from "../../components/Methods/Slice/Slice";
 import Map from "../../components/Methods/Map/Map";
+import ForEach from "../../components/Methods/ForEach/ForEach";
 
 function HomePage() {
   const { method } = useParams();
@@ -28,6 +29,7 @@ function HomePage() {
           {method === "splice" && <Splice />}
           {method === "slice" && <Slice />}
           {method === "map" && <Map />}
+          {method === "forEach" && <ForEach />}
         </section>
         <ArrayNav />
       </main>
