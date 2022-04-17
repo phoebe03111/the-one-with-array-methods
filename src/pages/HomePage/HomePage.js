@@ -12,6 +12,7 @@ import Splice from "../../components/Methods/Splice/Splice";
 import Slice from "../../components/Methods/Slice/Slice";
 import Map from "../../components/Methods/Map/Map";
 import ForEach from "../../components/Methods/ForEach/ForEach";
+import Filter from "../../components/Methods/Filter/Filter";
 
 function HomePage() {
   const { method } = useParams();
@@ -30,6 +31,7 @@ function HomePage() {
           {method === "slice" && <Slice />}
           {method === "map" && <Map />}
           {method === "forEach" && <ForEach />}
+          {method === "filter" && <Filter />}
         </section>
         <ArrayNav />
       </main>
