@@ -26,13 +26,13 @@ function Header() {
         </h1>
       </Link>
 
-      <div className="friends-statement">
-        <span className="friends-statement__text">
+      <div className="friends-code">
+        <span className="friends-code__text">
           const{" "}
           <img
             src={friendsImg}
             alt="friends"
-            className="friends-statement__img"
+            className="friends-code__img"
           />{" "}
           = ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler"]
         </span>

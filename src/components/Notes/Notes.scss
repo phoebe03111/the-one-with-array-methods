@@ -2,11 +2,11 @@
 
 .method__intro {
   color: #858585;
-  border: 2px solid #cecece;
+  border: 2px solid $border-color-gray;
   position: relative;
 
   li {
-    border-bottom: 2px dotted #cecece;
+    border-bottom: 2px dotted $border-color-gray;
     padding: 0.5rem 1.7rem;
   }
 
