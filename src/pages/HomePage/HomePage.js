@@ -19,6 +19,7 @@ import Includes from "../../components/Methods/Includes/Includes";
 import IndexOf from "../../components/Methods/IndexOf/IndexOf";
 import Reverse from "../../components/Methods/Reverse/Reverse";
 import Sort from "../../components/Methods/Sort/Sort";
+import Split from "../../components/Methods/Split/Split";
 
 function HomePage() {
   const { method } = useParams();
@@ -44,6 +45,7 @@ function HomePage() {
           {method === "indexOf" && <IndexOf />}
           {method === "reverse" && <Reverse />}
           {method === "sort" && <Sort />}
+          {method === "split" && <Split />}
         </section>
         <ArrayNav />
       </main>
