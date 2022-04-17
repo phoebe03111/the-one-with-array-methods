@@ -22,6 +22,7 @@ import Sort from "../../components/Methods/Sort/Sort";
 import Split from "../../components/Methods/Split/Split";
 import Join from "../../components/Methods/Join/Join";
 import ToString from "../../components/Methods/ToString/ToString";
+import Reduce from "../../components/Methods/Reduce/Reduce";
 
 function HomePage() {
   const { method } = useParams();
@@ -50,6 +51,7 @@ function HomePage() {
           {method === "split" && <Split />}
           {method === "join" && <Join />}
           {method === "toString" && <ToString />}
+          {method === "reduce" && <Reduce />}
         </section>
         <ArrayNav />
       </main>
