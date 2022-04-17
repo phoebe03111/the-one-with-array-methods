@@ -23,8 +23,8 @@ function Pop() {
       <h2 className="method__title">pop()</h2>
       <section className="method__section">
         <p>- Removes the last element from an array</p>
-        <p>- Will alter the original array</p>
         <p>- Returns the removed element</p>
+        <p>- Will Alter the original array</p>
       </section>
 
       <section className="method__section">

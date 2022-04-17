@@ -9,6 +9,7 @@ import Shift from "../../components/Methods/Shift/Shift";
 import "./HomePage.scss";
 import Concat from "../../components/Methods/Concat/Concat";
 import Splice from "../../components/Methods/Splice/Splice";
+import Slice from "../../components/Methods/Slice/Slice";
 
 function HomePage() {
   const { method } = useParams();
@@ -24,6 +25,7 @@ function HomePage() {
           {method === "shift" && <Shift />}
           {method === "concat" && <Concat />}
           {method === "splice" && <Splice />}
+          {method === "slice" && <Slice />}
         </section>
         <ArrayNav />
       </main>
