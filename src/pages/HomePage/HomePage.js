@@ -13,6 +13,7 @@ import Slice from "../../components/Methods/Slice/Slice";
 import Map from "../../components/Methods/Map/Map";
 import ForEach from "../../components/Methods/ForEach/ForEach";
 import Filter from "../../components/Methods/Filter/Filter";
+import Find from "../../components/Methods/Find/Find";
 
 function HomePage() {
   const { method } = useParams();
@@ -32,6 +33,7 @@ function HomePage() {
           {method === "map" && <Map />}
           {method === "forEach" && <ForEach />}
           {method === "filter" && <Filter />}
+          {method === "find" && <Find />}
         </section>
         <ArrayNav />
       </main>
