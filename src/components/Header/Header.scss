@@ -25,12 +25,18 @@ header {
 .friends-statement {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  font-size: 1rem;
-  font-family: "Courier New", Courier, monospace;
-  
-  @include tablet {
-    font-size: 1.2rem;
+  gap: 2rem;
+
+  &__text {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    font-family: "Courier New", Courier, monospace;
+
+    @include tablet {
+      font-size: 1.2rem;
+    }
   }
 
   &__img {
@@ -43,6 +49,19 @@ header {
 
     @include desktop {
       width: 11rem;
+    }
+  }
+}
+
+.copy {
+  &__icon {
+    font-size: 1rem;
+    color: $primary-color;
+    cursor: pointer;
+    position: relative;
+
+    svg {
+      font-size: 1.5rem;
     }
   }
 }
