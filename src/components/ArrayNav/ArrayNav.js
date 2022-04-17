@@ -80,7 +80,7 @@ function ArrayNav() {
 
   return (
     <nav>
-      <ul className="category__list">
+      <ul>
         {/* 1. Add / Remove elements */}
         <li className="category__title" onClick={handleSelectCategory1}>
           {showCategory1 ? <AiOutlineMinusCircle /> : <AiOutlinePlusCircle />}

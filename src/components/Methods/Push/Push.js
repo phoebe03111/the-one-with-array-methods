@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Notes from "../../Notes/Notes";
 import "./Push.scss";
 
 function Push() {
@@ -18,13 +19,17 @@ function Push() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const notes = [
+    "Adds element(s) to the end of an array",
+    "Returns the length of the new array",
+    "Will alter the original array",
+  ];
+
   return (
     <div className="method__container">
       <h2 className="method__title">push()</h2>
       <section className="method__section">
-        <p>- Adds element(s) to the end of an array</p>
-        <p>- Returns the length of the new array</p>
-        <p>- Will alter the original array</p>
+        <Notes notes={notes} />
       </section>
 
       <section className="method__section">

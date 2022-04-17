@@ -1,0 +1,26 @@
+@use "../../styles/partials/variables" as *;
+
+.method__intro {
+  color: #858585;
+  border: 2px solid #cecece;
+  position: relative;
+
+  li {
+    border-bottom: 2px dotted #cecece;
+    text-indent: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0.2rem;
+    left: 1rem;
+    background-color: $primary-color;
+  }
+}
