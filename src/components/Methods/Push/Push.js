@@ -23,22 +23,27 @@ function Push() {
       <h2 className="method__title">push()</h2>
       <section className="method__section">
         <p>- Adds element(s) to the end of an array</p>
-        <p>- Will alter the original array</p>
         <p>- Returns the length of the new array</p>
+        <p>- Will alter the original array</p>
       </section>
 
       <section className="method__section">
-        <h3 className="method__question">Janice wants to join the friends squad, add her to the end of the array!</h3>
+        <h3 className="method__question">
+          Janice wants to join the friends squad, add her to the end of the
+          array!
+        </h3>
         <input />
-        <button onClick={handleCheckAnswer1}>Check answer</button>
-        {checkAnswer1 && <p className="method__answer">friends.push("Janice")</p>}
+        <button onClick={handleCheckAnswer1}>Show answer</button>
+        {checkAnswer1 && (
+          <p className="method__answer">friends.push("Janice")</p>
+        )}
       </section>
 
       <section className="method__section">
         <h3 className="method__question">What's the return value?</h3>
         <p className="method__hint">console.log(friends.push("Janice"))</p>
         <input />
-        <button onClick={handleCheckAnswer2}>Check answer</button>
+        <button onClick={handleCheckAnswer2}>Show answer</button>
         {checkAnswer2 && <p className="method__answer">7</p>}
       </section>
 
@@ -46,10 +51,10 @@ function Push() {
         <h3 className="method__question">How does the array look like now?</h3>
         <p className="method__hint">console.log(friends)</p>
         <input />
-        <button onClick={handleCheckAnswer3}>Check answer</button>
+        <button onClick={handleCheckAnswer3}>Show answer</button>
         {checkAnswer3 && (
           <p className="method__answer">
-            ['Ross', 'Rachel', "Phoebe", "Joey", "Monica", "Chandler", "Janice"]
+            ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler", "Janice"]
           </p>
         )}
       </section>

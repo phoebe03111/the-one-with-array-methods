@@ -29,20 +29,19 @@ function Pop() {
 
       <section className="method__section">
         <h3 className="method__question">
-          Chandler has to go on a business trip to Tulsa, Oklahoma. Remove him from the array!
+          Chandler has to go on a business trip to Tulsa, Oklahoma. Remove him
+          from the array!
         </h3>
         <input />
-        <button onClick={handleCheckAnswer1}>Check answer</button>
-        {checkAnswer1 && (
-          <p className="method__answer">friends.pop()</p>
-        )}
+        <button onClick={handleCheckAnswer1}>Show answer</button>
+        {checkAnswer1 && <p className="method__answer">friends.pop()</p>}
       </section>
 
       <section className="method__section">
         <h3 className="method__question">What's the return value?</h3>
         <p className="method__hint">console.log(friends.pop())</p>
         <input />
-        <button onClick={handleCheckAnswer2}>Check answer</button>
+        <button onClick={handleCheckAnswer2}>Show answer</button>
         {checkAnswer2 && <p className="method__answer">"Chandler"</p>}
       </section>
 
@@ -50,10 +49,10 @@ function Pop() {
         <h3 className="method__question">How does the array look like now?</h3>
         <p className="method__hint">console.log(friends)</p>
         <input />
-        <button onClick={handleCheckAnswer3}>Check answer</button>
+        <button onClick={handleCheckAnswer3}>Show answer</button>
         {checkAnswer3 && (
           <p className="method__answer">
-            ['Ross', 'Rachel', "Phoebe", "Joey", "Monica"]
+            ["Rachel", "Ross", "Phoebe", "Joey", "Monica"]
           </p>
         )}
       </section>
