@@ -11,9 +11,13 @@ header {
   font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 1rem;
+
+  @include tablet {
+    font-size: 2rem;
+  }
 }
 
-.friends-font {
+.special-font {
   font-family: "Friends";
   letter-spacing: 1.5px;
 }
@@ -22,14 +26,22 @@ header {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  font-size: 1rem;
 
-  &__left {
-    display: flex;
-    align-items: center;
-    margin-right: 0.5rem;
+  @include tablet {
+    font-size: 1.2rem;
   }
 
   &__img {
     width: 8.5rem;
+
+    @include tablet {
+      width: 11rem;
+      margin: 0 0.5rem;
+    }
+
+    @include desktop {
+      width: 11rem;
+    }
   }
 }

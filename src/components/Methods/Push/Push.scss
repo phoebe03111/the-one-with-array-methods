@@ -1,11 +1,34 @@
+@use "../../../styles/partials/animations" as *;
 @use "../../../styles/partials/mixins" as *;
 @use "../../../styles/partials/typography" as *;
 @use "../../../styles/partials/variables" as *;
 
 .method {
   &__title {
-      font-size: 1.5rem;
-    // font-family: "Friends Font";
-    // letter-spacing: 1px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__section {
+    margin-bottom: 2rem;
+  }
+
+  &__question {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.answer {
+  animation: fadeInUp 1s;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }

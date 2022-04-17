@@ -21,28 +21,38 @@ function Push() {
   return (
     <>
       <h2 className="method__title">push()</h2>
-      <p>will add element(s) to the end of an array</p>
-      <p>will alter the original array</p>
-      <p>and will return the length of the new array</p>
+      <section className="method__section">
+        <p>- Adds element(s) to the end of an array</p>
+        <p>- Will alter the original array</p>
+        <p>- Returns the length of the new array</p>
+      </section>
 
-      <input />
-      <button onClick={handleCheckAnswer1}>Check answer</button>
-      {checkAnswer1 && <p>friends.push("Janice")</p>}
-      <h3>What's the return value?</h3>
-      <p>console.log(friends.push("Janice"))</p>
-      <input />
-      <button onClick={handleCheckAnswer2}>Check answer</button>
-      {checkAnswer2 && <p>"Janice"</p>}
+      <section className="method__section">
+        <h3 className="method__question">Janice wants to join the friends squad, add her to the array</h3>
+        <input />
+        <button onClick={handleCheckAnswer1}>Check answer</button>
+        {checkAnswer1 && <p className="answer">friends.push("Janice")</p>}
+      </section>
 
-      <h3>How does the array look like now?</h3>
-      <p>console.log(friends)</p>
-      <input />
-      <button onClick={handleCheckAnswer3}>Check answer</button>
-      {checkAnswer3 && (
-        <p>
-          ['Ross', 'Rachel', "Phoebe", "Joey", "Monica", "Chandler", "Janice"]
-        </p>
-      )}
+      <section className="method__section">
+        <h3 className="method__question">What's the return value?</h3>
+        <p>console.log(friends.push("Janice"))</p>
+        <input />
+        <button onClick={handleCheckAnswer2}>Check answer</button>
+        {checkAnswer2 && <p className="answer">"Janice"</p>}
+      </section>
+
+      <section className="method__section">
+        <h3 className="method__question">How does the array look like now?</h3>
+        <p>console.log(friends)</p>
+        <input />
+        <button onClick={handleCheckAnswer3}>Check answer</button>
+        {checkAnswer3 && (
+          <p className="answer">
+            ['Ross', 'Rachel', "Phoebe", "Joey", "Monica", "Chandler", "Janice"]
+          </p>
+        )}
+      </section>
     </>
   );
 }

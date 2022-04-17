@@ -15,13 +15,13 @@ function HomePage() {
     <div>
       <Header />
       <main>
-        <ArrayNav />
         <section className="method">
           {method === "push" && <Push />}
           {method === "unshift" && <Unshift />}
           {method === "pop" && <Pop />}
           {method === "shift" && <Shift />}
         </section>
+        <ArrayNav />
       </main>
     </div>
   );

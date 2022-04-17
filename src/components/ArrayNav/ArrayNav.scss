@@ -21,7 +21,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem 0;
     width: fit-content;
     cursor: pointer;
 
@@ -34,10 +34,15 @@ nav {
   &__item {
     margin-left: 1rem;
     color: $primary-color;
+    font-size: 1.2rem;
     cursor: pointer;
+    animation: fadeInDown 0.5s;
+    margin-bottom: 0.2rem;
 
     &:hover {
       text-decoration: underline;
+      width: fit-content;
+      padding: 0 0.2rem;
     }
   }
 }
