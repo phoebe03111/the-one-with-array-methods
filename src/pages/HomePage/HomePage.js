@@ -32,6 +32,7 @@ function HomePage() {
       <Header />
       <main>
         <section className="method">
+          {!method && <h3>Select an array method</h3>}
           {method === "push" && <Push />}
           {method === "unshift" && <Unshift />}
           {method === "pop" && <Pop />}

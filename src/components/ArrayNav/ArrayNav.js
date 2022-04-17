@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
 import "./ArrayNav.scss";
 
@@ -34,6 +34,14 @@ function ArrayNav() {
   const [showCategory5, setShowCategory5] = useState(false);
   const [showCategory6, setShowCategory6] = useState(false);
   const [showCategory7, setShowCategory7] = useState(false);
+
+  // collapse all nav items when re-direct to landing page
+  const { method } = useParams();
+  useEffect(() => {
+    if (!method) {
+      handleCollapse();
+    }
+  }, [method]);
 
   const navigate = useNavigate();
   const handleSelectMethod = (method) => {

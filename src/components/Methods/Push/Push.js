@@ -7,6 +7,7 @@ function Push() {
   const [checkAnswer2, setCheckAnswer2] = useState(false);
   const [checkAnswer3, setCheckAnswer3] = useState(false);
 
+  // 1st way to show answer: click the button
   const handleCheckAnswer1 = () => {
     setCheckAnswer1((prev) => !prev);
   };
@@ -17,6 +18,25 @@ function Push() {
 
   const handleCheckAnswer3 = () => {
     setCheckAnswer3((prev) => !prev);
+  };
+
+  // 2nd way to show answer: hit "Enter"
+  const handleEnter1 = (e) => {
+    if (e.key === "Enter") {
+      handleCheckAnswer1();
+    }
+  };
+
+  const handleEnter2 = (e) => {
+    if (e.key === "Enter") {
+      handleCheckAnswer2();
+    }
+  };
+
+  const handleEnter3 = (e) => {
+    if (e.key === "Enter") {
+      handleCheckAnswer3();
+    }
   };
 
   const notes = [
@@ -37,7 +57,7 @@ function Push() {
           Janice wants to join the friends squad, add her to the end of the
           array!
         </h3>
-        <input />
+        <input onKeyDown={handleEnter1} />
         <button onClick={handleCheckAnswer1}>Show answer</button>
         {checkAnswer1 && (
           <p className="method__answer">friends.push("Janice")</p>
@@ -47,7 +67,7 @@ function Push() {
       <section className="method__section">
         <h3 className="method__question">What's the return value?</h3>
         <p className="method__hint">console.log(friends.push("Janice"))</p>
-        <input />
+        <input onKeyDown={handleEnter2} />
         <button onClick={handleCheckAnswer2}>Show answer</button>
         {checkAnswer2 && <p className="method__answer">7</p>}
       </section>
@@ -55,7 +75,7 @@ function Push() {
       <section className="method__section">
         <h3 className="method__question">How does the array look like now?</h3>
         <p className="method__hint">console.log(friends)</p>
-        <input />
+        <input onKeyDown={handleEnter3} />
         <button onClick={handleCheckAnswer3}>Show answer</button>
         {checkAnswer3 && (
           <p className="method__answer">
