@@ -8,6 +8,7 @@ import Pop from "../../components/Methods/Pop/Pop";
 import Shift from "../../components/Methods/Shift/Shift";
 import "./HomePage.scss";
 import Concat from "../../components/Methods/Concat/Concat";
+import Splice from "../../components/Methods/Splice/Splice";
 
 function HomePage() {
   const { method } = useParams();
@@ -22,6 +23,7 @@ function HomePage() {
           {method === "pop" && <Pop />}
           {method === "shift" && <Shift />}
           {method === "concat" && <Concat />}
+          {method === "splice" && <Splice />}
         </section>
         <ArrayNav />
       </main>
