@@ -10,6 +10,7 @@ import "./HomePage.scss";
 import Concat from "../../components/Methods/Concat/Concat";
 import Splice from "../../components/Methods/Splice/Splice";
 import Slice from "../../components/Methods/Slice/Slice";
+import Map from "../../components/Methods/Map/Map";
 
 function HomePage() {
   const { method } = useParams();
@@ -26,6 +27,7 @@ function HomePage() {
           {method === "concat" && <Concat />}
           {method === "splice" && <Splice />}
           {method === "slice" && <Slice />}
+          {method === "map" && <Map />}
         </section>
         <ArrayNav />
       </main>
