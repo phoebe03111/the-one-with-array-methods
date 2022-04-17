@@ -28,27 +28,27 @@ function Push() {
       </section>
 
       <section className="method__section">
-        <h3 className="method__question">Janice wants to join the friends squad, add her to the array</h3>
+        <h3 className="method__question">Janice wants to join the friends squad, add her to the end of the array!</h3>
         <input />
         <button onClick={handleCheckAnswer1}>Check answer</button>
-        {checkAnswer1 && <p className="answer">friends.push("Janice")</p>}
+        {checkAnswer1 && <p className="method__answer">friends.push("Janice")</p>}
       </section>
 
       <section className="method__section">
         <h3 className="method__question">What's the return value?</h3>
-        <p>console.log(friends.push("Janice"))</p>
+        <p className="method__hint">console.log(friends.push("Janice"))</p>
         <input />
         <button onClick={handleCheckAnswer2}>Check answer</button>
-        {checkAnswer2 && <p className="answer">"Janice"</p>}
+        {checkAnswer2 && <p className="method__answer">"Janice"</p>}
       </section>
 
       <section className="method__section">
         <h3 className="method__question">How does the array look like now?</h3>
-        <p>console.log(friends)</p>
+        <p className="method__hint">console.log(friends)</p>
         <input />
         <button onClick={handleCheckAnswer3}>Check answer</button>
         {checkAnswer3 && (
-          <p className="answer">
+          <p className="method__answer">
             ['Ross', 'Rachel', "Phoebe", "Joey", "Monica", "Chandler", "Janice"]
           </p>
         )}

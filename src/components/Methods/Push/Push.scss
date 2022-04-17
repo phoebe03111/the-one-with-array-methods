@@ -16,10 +16,15 @@
   &__question {
     margin-bottom: 0.5rem;
   }
-}
 
-.answer {
-  animation: fadeInUp 1s;
+  &__hint {
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  &__answer {
+    margin: 0.5rem;
+    animation: fadeInUp 1s;
+  }
 }
 
 @keyframes fadeInUp {

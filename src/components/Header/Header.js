@@ -19,7 +19,7 @@ function Header() {
           alt="friends"
           className="friends-statement__img"
         />{" "}
-        = ['Ross', 'Rachel', "Phoebe", "Joey", "Monica", "Chandler"]{" "}
+        = ["Ross", "Rachel", "Phoebe", "Joey", "Monica", "Chandler"]{" "}
       </span>
     </header>
   );
