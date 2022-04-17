@@ -18,6 +18,7 @@ import FindIndex from "../../components/Methods/FindIndex/FindIndex";
 import Includes from "../../components/Methods/Includes/Includes";
 import IndexOf from "../../components/Methods/IndexOf/IndexOf";
 import Reverse from "../../components/Methods/Reverse/Reverse";
+import Sort from "../../components/Methods/Sort/Sort";
 
 function HomePage() {
   const { method } = useParams();
@@ -42,6 +43,7 @@ function HomePage() {
           {method === "includes" && <Includes />}
           {method === "indexOf" && <IndexOf />}
           {method === "reverse" && <Reverse />}
+          {method === "sort" && <Sort />}
         </section>
         <ArrayNav />
       </main>
