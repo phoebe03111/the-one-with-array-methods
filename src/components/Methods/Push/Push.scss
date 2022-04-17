@@ -7,6 +7,8 @@
   &__title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    font-family: "Courier New", Courier, monospace;
+    color: $secondary-color;
   }
 
   &__section {
@@ -24,6 +26,7 @@
   &__answer {
     margin: 0.5rem;
     animation: fadeInUp 1s;
+    font-family: "Courier New", Courier, monospace;
   }
 }
 

@@ -39,7 +39,7 @@ function Push() {
         <p className="method__hint">console.log(friends.push("Janice"))</p>
         <input />
         <button onClick={handleCheckAnswer2}>Check answer</button>
-        {checkAnswer2 && <p className="method__answer">"Janice"</p>}
+        {checkAnswer2 && <p className="method__answer">7</p>}
       </section>
 
       <section className="method__section">
