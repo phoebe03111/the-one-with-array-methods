@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ArraySection from "../../ArraySection/ArraySection";
 import Notes from "../../Notes/Notes";
 import QuestionSection from "../../QuestionSection/QuestionSection";
 import ReturnValueSection from "../../ReturnValueSection/ReturnValueSection";
