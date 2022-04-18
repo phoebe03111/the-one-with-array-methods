@@ -22,6 +22,7 @@ function Instruction() {
         <a
           href="https://github.com/phoebe03111/the-one-with-array-methods"
           target="_blank"
+          rel="noreferrer"
           className="instructions__github"
         >
           <span>Phoebe</span> <AiFillGithub />
