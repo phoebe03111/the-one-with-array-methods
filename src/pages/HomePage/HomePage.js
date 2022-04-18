@@ -22,6 +22,7 @@ import Split from "../../components/Methods/Split/Split";
 import Join from "../../components/Methods/Join/Join";
 import Reduce from "../../components/Methods/Reduce/Reduce";
 import "./HomePage.scss";
+import Instruction from "../../components/Instructions/Instructions";
 
 function HomePage() {
   const { method } = useParams();
@@ -31,7 +32,6 @@ function HomePage() {
       <Header />
       <main>
         <section className="method">
-          {!method && <h3>Select an array method</h3>}
           {method === "push" && <Push />}
           {method === "unshift" && <Unshift />}
           {method === "pop" && <Pop />}
@@ -51,8 +51,9 @@ function HomePage() {
           {method === "split" && <Split />}
           {method === "join" && <Join />}
           {method === "reduce" && <Reduce />}
+          {!method && <Instruction />}
         </section>
-        
+
         <ArrayNav />
       </main>
     </div>

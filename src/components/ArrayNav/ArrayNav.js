@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
+import { MdOutlineIntegrationInstructions } from "react-icons/md";
 import "./ArrayNav.scss";
 
 const methods = [
@@ -85,9 +86,21 @@ function ArrayNav() {
     setShowCategory7(false);
   };
 
+  const handleCheckInstruction = () => {
+    navigate(`/`);
+  };
+
   return (
     <nav>
       <ul>
+        {/* Instructions */}
+        <li
+          className="category__title category__instruction"
+          onClick={handleCheckInstruction}
+        >
+          <MdOutlineIntegrationInstructions /> Instructions
+        </li>
+
         {/* 1. Add / Remove elements */}
         <li className="category__title" onClick={handleSelectCategory1}>
           {showCategory1 ? <AiOutlineMinusCircle /> : <AiOutlinePlusCircle />}
