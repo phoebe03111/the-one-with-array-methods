@@ -58,20 +58,9 @@ function Find() {
       </section>
 
       <section className="method__section">
-        {/* <h3 className="method__question">
-          There's a hot girl looking for her boyfriend whose name starts with
-          "J". Let's find out who's the lucky guy?
-        </h3>
-        <input />
-        <button onClick={handleCheckAnswer1}>Show answer</button>
-        {checkAnswer1 && (
-          <p className="method__answer">
-            friends.find(person => person[0] === 'J')
-          </p>
-        )} */}
         <QuestionSection
-          question={`There's a hot girl looking for her boyfriend whose name starts with
-          "J". Let's find out who's the lucky guy?`}
+          question={`A hot girl called and she's looking for someone whose name starts with
+          "J". Let's find out who's the lucky guy? 👄`}
           answer="friends.find(person => person[0] === 'J')"
           handleEnter1={handleEnter1}
           handleCheckAnswer1={handleCheckAnswer1}
@@ -81,7 +70,7 @@ function Find() {
 
       <section className="method__section">
         <ReturnValueSection
-          hint='friends.find("...")'
+          hint='friends.find(...)'
           answer={JSON.stringify(friends.find((person) => person[0] === "J"))}
           handleEnter2={handleEnter2}
           handleCheckAnswer2={handleCheckAnswer2}

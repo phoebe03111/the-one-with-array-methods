@@ -59,7 +59,7 @@ function IndexOf() {
 
       <section className="method__section">
         <QuestionSection
-          question=" Monica is pissed that Joey made a big mess in her kitchen! Let's find
+          question=" Monica is pissed that Joey made a big mess in her kitchen! 😡 Let's find
           out where Joey is."
           answer='friends.indexOf("Joey")'
           handleEnter1={handleEnter1}
@@ -70,7 +70,7 @@ function IndexOf() {
 
       <section className="method__section">
         <ReturnValueSection
-          hint='friends.indexOf("...")'
+          hint='friends.indexOf(...)'
           answer={JSON.stringify(friends.indexOf("Joey"))}
           handleEnter2={handleEnter2}
           handleCheckAnswer2={handleCheckAnswer2}

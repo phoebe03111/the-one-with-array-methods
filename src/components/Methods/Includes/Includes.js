@@ -60,8 +60,8 @@ function Includes() {
 
       <section className="method__section">
         <QuestionSection
-          question="I wonder if Ted is a member of friends?"
-          answer='friends.includes("Ted")'
+          question="I wonder if baby-yoda is a member of friends? 👻"
+          answer='friends.includes("baby-yoda")'
           handleEnter1={handleEnter1}
           handleCheckAnswer1={handleCheckAnswer1}
           checkAnswer1={checkAnswer1}
@@ -70,8 +70,8 @@ function Includes() {
 
       <section className="method__section">
         <ReturnValueSection
-          hint={'friends.includes("...")'}
-          answer={JSON.stringify(friends.includes("Ted"))}
+          hint={'friends.includes(...)'}
+          answer={JSON.stringify(friends.includes("baby-yoda"))}
           handleEnter2={handleEnter2}
           handleCheckAnswer2={handleCheckAnswer2}
           checkAnswer2={checkAnswer2}

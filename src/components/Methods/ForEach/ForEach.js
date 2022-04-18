@@ -44,11 +44,14 @@ function ForEach() {
 
   const notes = [
     "Performs a callback function on each item",
-    "Does NOT return anything (the only difference with map() method!)",
+    "Does NOT return anything (the main difference vs. map() !)",
     "Will NOT alter the original array",
   ];
 
   const friends = ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler"];
+
+  // placeholder function
+  const drinkCoffee = () => {};
 
   return (
     <div className="method__container">
@@ -58,21 +61,9 @@ function ForEach() {
       </section>
 
       <section className="method__section">
-        {/* <h3 className="method__question">
-          Who doesn't love to be a Geller? Let's add a lastname "Geller" to each
-          person in the array.
-        </h3>
-        <input />
-        <button onClick={handleCheckAnswer1}>Show answer</button>
-        {checkAnswer1 && (
-          <p className="method__answer">
-            friends.forEach(person => person += ' Geller')
-          </p>
-        )} */}
         <QuestionSection
-          question={`Who doesn't love to be a Geller? Let's add a lastname "Geller" to each
-          person in the array.`}
-          answer="friends.forEach(person => person += ' Geller')"
+          question={`It's time to go to Central Perk ☕ ! Let's make everyone do a drinkCoffee function.`}
+          answer="friends.forEach(person => drinkCoffee(person))"
           handleEnter1={handleEnter1}
           handleCheckAnswer1={handleCheckAnswer1}
           checkAnswer1={checkAnswer1}
@@ -81,11 +72,10 @@ function ForEach() {
 
       <section className="method__section">
         <ReturnValueSection
-          hint='friends.forEach("...")'
+          hint='friends.forEach(...)'
           answer={
-            JSON.stringify(
-              friends.forEach((person) => (person += " Geller"))
-            ) || "undefined"
+            JSON.stringify(friends.forEach((person) => drinkCoffee(person))) ||
+            "undefined"
           }
           handleEnter2={handleEnter2}
           handleCheckAnswer2={handleCheckAnswer2}

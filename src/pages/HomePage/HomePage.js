@@ -20,7 +20,6 @@ import Reverse from "../../components/Methods/Reverse/Reverse";
 import Sort from "../../components/Methods/Sort/Sort";
 import Split from "../../components/Methods/Split/Split";
 import Join from "../../components/Methods/Join/Join";
-import ToString from "../../components/Methods/ToString/ToString";
 import Reduce from "../../components/Methods/Reduce/Reduce";
 import "./HomePage.scss";
 
@@ -51,9 +50,9 @@ function HomePage() {
           {method === "sort" && <Sort />}
           {method === "split" && <Split />}
           {method === "join" && <Join />}
-          {method === "toString" && <ToString />}
           {method === "reduce" && <Reduce />}
         </section>
+        
         <ArrayNav />
       </main>
     </div>

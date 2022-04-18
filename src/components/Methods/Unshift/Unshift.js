@@ -59,7 +59,7 @@ function Unshift() {
 
       <section className="method__section">
         <QuestionSection
-          question="Gunther came to see Rachel, add him to the beginning of the array so
+          question="Gunther came to see Rachel 😳 . Add him to the beginning of the array so
           he can stand next to her."
           answer="friends.unshift('Gunther')"
           handleEnter1={handleEnter1}

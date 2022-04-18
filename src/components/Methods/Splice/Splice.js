@@ -43,9 +43,10 @@ function Splice() {
   };
 
   const notes = [
-    "Changes the content of an array by removing or replacing existing elements, and/or adding new elements in place",
-    "Returns an array containing the added element / removed element, or an empty array if nothing is removed",
+    "Removes existing element(s) or adds new element(s) to the array",
+    "Returns an array containing the added / removed element, or an empty array if nothing is removed",
     "Will alter the original array",
+    "splice(startIndex, deleteCount) / splice(startIndex, deleteCount, itemToInsert)",
   ];
 
   const friends = ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler"];
@@ -59,7 +60,7 @@ function Splice() {
 
       <section className="method__section">
         <QuestionSection
-          question={`Phoebe is going to Central Perk to sing "smelly cat" today. Remove her
+          question={`Phoebe is going to perform her song 'smelly cat' today 🎸 . Remove her
           from the array so she can go practice!`}
           answer="friends.splice(2,1)"
           handleEnter1={handleEnter1}

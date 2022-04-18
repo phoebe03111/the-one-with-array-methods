@@ -59,7 +59,7 @@ function Pop() {
 
       <section className="method__section">
         <QuestionSection
-          question="Chandler has to go on a business trip to Tulsa, Oklahoma. Remove him
+          question="Chandler has to go on a business trip to Tulsa, Oklahoma 👔 . Remove him
           from the array!"
           answer="friends.pop()"
           handleEnter1={handleEnter1}
@@ -70,7 +70,7 @@ function Pop() {
 
       <section className="method__section">
         <ReturnValueSection
-          hint={"friends.pop()"}
+          hint="friends.pop()"
           answer={JSON.stringify(friends.pop())}
           handleEnter2={handleEnter2}
           handleCheckAnswer2={handleCheckAnswer2}

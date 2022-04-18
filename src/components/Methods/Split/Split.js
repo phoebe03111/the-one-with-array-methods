@@ -45,7 +45,7 @@ function Split() {
   const notes = [
     "It's a string method that splits a string into an array of substrings",
     "Returns a new array",
-    "Will NOT alter the original array",
+    "Will NOT alter the original string",
   ];
 
   const friends = ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler"];
@@ -71,7 +71,7 @@ function Split() {
 
       <section className="method__section">
         <ReturnValueSection
-          hint="friends.split(...)"
+          hint="show.split(...)"
           answer={JSON.stringify(show.split("-"))}
           handleEnter2={handleEnter2}
           handleCheckAnswer2={handleCheckAnswer2}
@@ -80,12 +80,17 @@ function Split() {
       </section>
 
       <section className="method__section">
-        <ArraySection
-          answer={JSON.stringify(show)}
-          handleEnter3={handleEnter3}
-          handleCheckAnswer3={handleCheckAnswer3}
-          checkAnswer3={checkAnswer3}
-        />
+        <h3 className="method__question">
+          How does the original string look like now?
+        </h3>
+        <p className="method__hint">console.log(show)</p>
+        <input onKeyDown={handleEnter3} />
+        <button onClick={handleCheckAnswer3}>
+          {checkAnswer3 ? "Hide" : "Show"} answer
+        </button>
+        {checkAnswer3 && (
+          <p className="method__answer">{JSON.stringify(show)}</p>
+        )}
       </section>
     </div>
   );

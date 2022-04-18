@@ -22,7 +22,6 @@ const methods = [
   "sort",
   "split",
   "join",
-  "toString",
   "reduce",
 ];
 
@@ -175,7 +174,7 @@ function ArrayNav() {
           Convert elements
         </li>
         {showCategory6 &&
-          methods.slice(16, 19).map((method) => (
+          methods.slice(16, 18).map((method) => (
             <li
               className="category__item"
               key={method}
@@ -185,13 +184,13 @@ function ArrayNav() {
             </li>
           ))}
 
-        {/* 7. Reduce elements to one single value*/}
+        {/* 7. Reduce elements */}
         <li className="category__title" onClick={handleSelectCategory7}>
           {showCategory7 ? <AiOutlineMinusCircle /> : <AiOutlinePlusCircle />}{" "}
-          Reduce elements to one single value
+          Reduce elements
         </li>
         {showCategory7 &&
-          methods.slice(19, 20).map((method) => (
+          methods.slice(18, 19).map((method) => (
             <li
               className="category__item"
               key={method}

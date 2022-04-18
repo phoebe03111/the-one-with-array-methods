@@ -60,7 +60,7 @@ function Reverse() {
 
       <section className="method__section">
         <QuestionSection
-          question={`Rachel and Ross are fighting again ("WE WERE ON A BREAK!!!"). 🙄
+          question={`Rachel and Ross are fighting again ("WE WERE ON A BREAK!!!") 🙄
           Reverse the order and move them to the end of the array.`}
           answer="friends.reverse()"
           handleEnter1={handleEnter1}

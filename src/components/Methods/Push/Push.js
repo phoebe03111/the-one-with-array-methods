@@ -58,17 +58,8 @@ function Push() {
       </section>
 
       <section className="method__section">
-        {/* <h3 className="method__question">
-          Janice wants to join the friends squad, add her to the end of the
-          array!
-        </h3>
-        <input onKeyDown={handleEnter1} />
-        <button onClick={handleCheckAnswer1}>Show answer</button>
-        {checkAnswer1 && (
-          <p className="method__answer">friends.push("Janice")</p>
-        )} */}
         <QuestionSection
-          question="Janice wants to join the friends squad, add her to the end of the array!"
+          question="Janice wants to join the friends squad 💃🏻 . Add her to the end of the array!"
           answer='friends.push("Janice")'
           handleEnter1={handleEnter1}
           handleCheckAnswer1={handleCheckAnswer1}
@@ -77,17 +68,8 @@ function Push() {
       </section>
 
       <section className="method__section">
-        {/* <h3 className="method__question">What's the return value?</h3>
-        <p className="method__hint">console.log(friends.push("..."))</p>
-        <input onKeyDown={handleEnter2} />
-        <button onClick={handleCheckAnswer2}>Show answer</button>
-        {checkAnswer2 && (
-          <p className="method__answer">
-            {JSON.stringify(friends.push("Janice"))}
-          </p>
-        )} */}
         <ReturnValueSection
-          hint='friends.push("...")'
+          hint="friends.push(...)"
           answer={JSON.stringify(friends.push("Janice"))}
           handleEnter2={handleEnter2}
           handleCheckAnswer2={handleCheckAnswer2}
@@ -96,15 +78,6 @@ function Push() {
       </section>
 
       <section className="method__section">
-        {/* <h3 className="method__question">
-          How does the original array look like now?
-        </h3>
-        <p className="method__hint">console.log(friends)</p>
-        <input onKeyDown={handleEnter3} />
-        <button onClick={handleCheckAnswer3}>Show answer</button>
-        {checkAnswer3 && (
-          <p className="method__answer">{JSON.stringify(friends)}</p>
-        )} */}
         <ArraySection
           answer={JSON.stringify(friends)}
           handleEnter3={handleEnter3}

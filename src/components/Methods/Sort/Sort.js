@@ -60,8 +60,8 @@ function Sort() {
 
       <section className="method__section">
         <QuestionSection
-          question="Let's sort the array in a ascending order."
-          answer="friends.sort()"
+          question="Monica hates unorganized things - including an array! 🤦‍♀️ Help her sort the friends array by length in descending order."
+          answer="friends.sort((a, b) => b.length - a.length)"
           handleEnter1={handleEnter1}
           handleCheckAnswer1={handleCheckAnswer1}
           checkAnswer1={checkAnswer1}
@@ -70,8 +70,8 @@ function Sort() {
 
       <section className="method__section">
         <ReturnValueSection
-          hint={"friends.sort()"}
-          answer={JSON.stringify(friends.sort())}
+          hint={"friends.sort(...)"}
+          answer={JSON.stringify(friends.sort((a, b) => b.length - a.length))}
           handleEnter2={handleEnter2}
           handleCheckAnswer2={handleCheckAnswer2}
           checkAnswer2={checkAnswer2}

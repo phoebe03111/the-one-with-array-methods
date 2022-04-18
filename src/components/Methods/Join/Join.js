@@ -59,7 +59,7 @@ function Join() {
 
       <section className="method__section">
         <QuestionSection
-          question={`Join each friend member into a big string with a seperator "/"`}
+          question={`Ross bought a big house for everyone to live together 🏠 ! Join the friends array into one big string with a seperator "/"`}
           answer="friends.join('/')"
           handleEnter1={handleEnter1}
           handleCheckAnswer1={handleCheckAnswer1}

@@ -29,26 +29,10 @@
   }
 
   &__answer {
-    display: inline-block;
     margin: 0.5rem;
     animation: fadeInUp 1s;
     font-family: "Courier New", Courier, monospace;
     color: $secondary-color;
     font-weight: 600;
-
-    @include tablet {
-      display: block;
-    }
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    transform: translate3d(0, 40px, 0);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
   }
 }

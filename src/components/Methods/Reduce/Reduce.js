@@ -43,10 +43,9 @@ function Reduce() {
   };
 
   const notes = [
-    "reduce(callbackFn, initialValue)",
-    "reduce((prevValue, currValue) => ...)",
-    "Returns a single value that the function accumulated",
+    "Returns a single value that the callback function accumulated - (prevValue, currValue) => {...})",
     "Will NOT alter the original array",
+    "reduce(callbackFn, initialValue)",
   ];
 
   const friends = ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler"];
@@ -60,7 +59,7 @@ function Reduce() {
 
       <section className="method__section">
         <QuestionSection
-          question="Let's sort the array in a ascending order."
+          question="Let's get the sum of the length of each name! 👯"
           answer="friends.map(person => person.length).reduce((prev, curr) => prev + curr)"
           handleEnter1={handleEnter1}
           handleCheckAnswer1={handleCheckAnswer1}

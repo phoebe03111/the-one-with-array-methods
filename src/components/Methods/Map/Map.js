@@ -59,7 +59,7 @@ function Map() {
 
       <section className="method__section">
         <QuestionSection
-          question="Friends are THE BEST show ever! Let's make their names all uppercase."
+          question="Friends is THE BEST show ever! 😏 Let's make their names all uppercase."
           answer="friends.map(person => person.toUpperCase())"
           handleEnter1={handleEnter1}
           handleCheckAnswer1={handleCheckAnswer1}
@@ -69,7 +69,7 @@ function Map() {
 
       <section className="method__section">
         <ReturnValueSection
-          hint={'friends.map("...")'}
+          hint={'friends.map(...)'}
           answer={JSON.stringify(friends.map((person) => person.toUpperCase()))}
           handleEnter2={handleEnter2}
           handleCheckAnswer2={handleCheckAnswer2}

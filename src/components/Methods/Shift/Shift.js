@@ -60,7 +60,7 @@ function Shift() {
 
       <section className="method__section">
         <QuestionSection
-          question="Rachel is going for the Ralph Lauren fashion show tonight. Remove her
+          question="Rachel is going for the Ralph Lauren fashion show tonight 👠 . Remove her
           from the array!"
           answer="friends.shift()"
           handleEnter1={handleEnter1}

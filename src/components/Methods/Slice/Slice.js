@@ -43,10 +43,10 @@ function Slice() {
   };
 
   const notes = [
-    "slice(startIndex, endIndex)",
-    "Makes a copy of the array from startIndex (inclusive) to endIndex (exclusive). If endIndex is not specified, it wll copy to the lastindex of the array",
-    "Returns a 'selection of array' from startIndex to endIndex",
+    "Makes a copy of the array from startIndex (inclusive) to endIndex (exclusive). If endIndex is not specified, it wll copy to the last index of the array",
+    'Returns selected elements in an array',
     "Will NOT alter the original array",
+    "slice(startIndex, endIndex)",
   ];
 
   const friends = ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler"];
@@ -60,7 +60,7 @@ function Slice() {
 
       <section className="method__section">
         <QuestionSection
-          question="I'LL BE THERE FOR YOU~ Can you make a copy of the friends array?"
+          question="I'LL~BE~THERE~FOR~YOU~ 🙌 Can you make a copy of the friends array?"
           answer="friends.slice()"
           handleEnter1={handleEnter1}
           handleCheckAnswer1={handleCheckAnswer1}
@@ -79,7 +79,7 @@ function Slice() {
       </section>
 
       <section className="method__section">
-      <ArraySection
+        <ArraySection
           answer={JSON.stringify(friends)}
           handleEnter3={handleEnter3}
           handleCheckAnswer3={handleCheckAnswer3}

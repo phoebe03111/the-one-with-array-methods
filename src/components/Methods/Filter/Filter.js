@@ -58,8 +58,8 @@ function Filter() {
 
       <section className="method__section">
         <QuestionSection
-          question="Whose names have more than 4 characters?"
-          answer="friends.filter(person => person.length > 4)"
+          question="Whose names have less than 5 characters? 👀"
+          answer="friends.filter(person => person.length < 5)"
           handleEnter1={handleEnter1}
           handleCheckAnswer1={handleCheckAnswer1}
           checkAnswer1={checkAnswer1}
@@ -68,8 +68,8 @@ function Filter() {
 
       <section className="method__section">
         <ReturnValueSection
-          hint='friends.filter("...")'
-          answer={JSON.stringify(friends.filter((person) => person.length > 4))}
+          hint='friends.filter(...)'
+          answer={JSON.stringify(friends.filter((person) => person.length < 5))}
           handleEnter2={handleEnter2}
           handleCheckAnswer2={handleCheckAnswer2}
           checkAnswer2={checkAnswer2}

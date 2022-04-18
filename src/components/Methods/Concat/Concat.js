@@ -49,7 +49,7 @@ function Concat() {
   ];
 
   const friends = ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler"];
-  const starwars = ["baby yoda"];
+  const HIMYM = ["Ted", "Robin", "Barny", "Lily", "Marshall"];
 
   return (
     <div className="method__container">
@@ -60,8 +60,8 @@ function Concat() {
 
       <section className="method__section">
         <QuestionSection
-          question="The starwars group (const starwars = ['baby yoda']) wants to hang out with friends cast. Let's have a big party!"
-          answer="friends.concat(starwars)"
+          question={`Some people in New York (const HIMYM = ["Ted", "Robin", "Barny", "Lily", "Marshall"]) wants to hang out with friends. Let's have a big party! 🎉 🥳 🎉`}
+          answer="friends.concat(HIMYM)"
           handleEnter1={handleEnter1}
           handleCheckAnswer1={handleCheckAnswer1}
           checkAnswer1={checkAnswer1}
@@ -70,8 +70,8 @@ function Concat() {
 
       <section className="method__section">
         <ReturnValueSection
-          hint='friends.concat("...")'
-          answer={JSON.stringify(friends.concat(starwars))}
+          hint="friends.concat(...)"
+          answer={JSON.stringify(friends.concat(HIMYM))}
           handleEnter2={handleEnter2}
           handleCheckAnswer2={handleCheckAnswer2}
           checkAnswer2={checkAnswer2}

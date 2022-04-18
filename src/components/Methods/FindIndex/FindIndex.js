@@ -58,18 +58,8 @@ function FindIndex() {
       </section>
 
       <section className="method__section">
-        {/* <h3 className="method__question">
-          Let's look for the index of a person who has an 'z' in their names!
-        </h3>
-        <input />
-        <button onClick={handleCheckAnswer1}>Show answer</button>
-        {checkAnswer1 && (
-          <p className="method__answer">
-            friends.findIndex(person => person.includes('z'))
-          </p>
-        )} */}
         <QuestionSection
-          question={`Let's look for the index of a person who has an 'z' in their names!`}
+          question={`Let's look for the index of the person who has an 'z' in their names! 🧐`}
           answer="friends.findIndex(person => person.includes('z'))"
           handleEnter1={handleEnter1}
           handleCheckAnswer1={handleCheckAnswer1}
@@ -79,7 +69,7 @@ function FindIndex() {
 
       <section className="method__section">
         <ReturnValueSection
-          hint='friends.findIndex("...")'
+          hint='friends.findIndex(...)'
           answer={JSON.stringify(
             friends.findIndex((person) => person.includes("z"))
           )}
