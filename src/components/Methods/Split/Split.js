@@ -47,7 +47,6 @@ function Split() {
     "Will NOT alter the original string",
   ];
 
-  const friends = ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler"];
   const show = "Days-Of-Our-Lives";
 
   return (
