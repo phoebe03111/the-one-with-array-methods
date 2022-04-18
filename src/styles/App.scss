@@ -41,8 +41,7 @@ li {
   list-style-type: none;
 }
 
-input,
-textarea {
+input {
   border: none;
   outline: none;
   border-radius: 5px;
@@ -52,10 +51,6 @@ textarea {
   font-size: 1rem;
   width: 80%;
   font-family: "Courier New", Courier, monospace;
-}
-
-textarea {
-  resize: none;
 }
 
 button {

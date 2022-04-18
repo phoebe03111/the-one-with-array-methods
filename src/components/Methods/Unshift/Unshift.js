@@ -46,10 +46,23 @@ function Unshift() {
 
       <section className="method__section">
         <h3 className="method__question">What's the return value?</h3>
-        <p className="method__hint">console.log(friends.unshift())</p>
+        <p className="method__hint">console.log(friends.unshift(...))</p>
         <input />
         <button onClick={handleCheckAnswer2}>Show answer</button>
-        {checkAnswer2 && <p className="method__answer">7</p>}
+        {checkAnswer2 && (
+          <p className="method__answer">
+            {JSON.stringify(
+              [
+                "Rachel",
+                "Ross",
+                "Phoebe",
+                "Joey",
+                "Monica",
+                "Chandler",
+              ].unshift("Gunther")
+            )}
+          </p>
+        )}
       </section>
 
       <section className="method__section">

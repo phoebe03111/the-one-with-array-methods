@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Notes from "../../Notes/Notes";
+import ReturnValueSection from "../../ReturnValueSection/ReturnValueSection";
 import "../Push/Push.scss";
 
 function Includes() {
@@ -19,11 +20,19 @@ function Includes() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const handleEnter2 = (e) => {
+    if (e.key === "Enter") {
+      handleCheckAnswer2();
+    }
+  };
+
   const notes = [
     "Check if an array has a certain value among its entries",
     "Returns true or false",
     "Will NOT alter the original array",
   ];
+
+  const friends = ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler"];
 
   return (
     <div className="method__container">
@@ -44,11 +53,18 @@ function Includes() {
       </section>
 
       <section className="method__section">
-        <h3 className="method__question">What's the return value?</h3>
+        {/* <h3 className="method__question">What's the return value?</h3>
         <p className="method__hint">console.log(friends.includes(...))</p>
         <input />
         <button onClick={handleCheckAnswer2}>Show answer</button>
-        {checkAnswer2 && <p className="method__answer">false</p>}
+        {checkAnswer2 && <p className="method__answer">false</p>} */}
+        <ReturnValueSection
+          hint={'friends.includes("...")'}
+          answer={JSON.stringify(friends.includes("Ted"))}
+          handleEnter2={handleEnter2}
+          handleCheckAnswer2={handleCheckAnswer2}
+          checkAnswer2={checkAnswer2}
+        />
       </section>
 
       <section className="method__section">

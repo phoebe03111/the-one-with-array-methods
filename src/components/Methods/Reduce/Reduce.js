@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import ArraySection from "../../ArraySection/ArraySection";
 import Notes from "../../Notes/Notes";
+import QuestionSection from "../../QuestionSection/QuestionSection";
+import ReturnValueSection from "../../ReturnValueSection/ReturnValueSection";
 import "../Push/Push.scss";
 
 function Reduce() {
@@ -7,6 +10,7 @@ function Reduce() {
   const [checkAnswer2, setCheckAnswer2] = useState(false);
   const [checkAnswer3, setCheckAnswer3] = useState(false);
 
+  // 1st way to show answer: click the button
   const handleCheckAnswer1 = () => {
     setCheckAnswer1((prev) => !prev);
   };
@@ -19,12 +23,33 @@ function Reduce() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  // 2nd way to show answer: hit "Enter"
+  const handleEnter1 = (e) => {
+    if (e.key === "Enter") {
+      handleCheckAnswer1();
+    }
+  };
+
+  const handleEnter2 = (e) => {
+    if (e.key === "Enter") {
+      handleCheckAnswer2();
+    }
+  };
+
+  const handleEnter3 = (e) => {
+    if (e.key === "Enter") {
+      handleCheckAnswer3();
+    }
+  };
+
   const notes = [
     "reduce(callbackFn, initialValue)",
-    'reduce((prevValue, currValue) => ...)',
+    "reduce((prevValue, currValue) => ...)",
     "Returns a single value that the function accumulated",
     "Will NOT alter the original array",
   ];
+
+  const friends = ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler"];
 
   return (
     <div className="method__container">
@@ -34,37 +59,36 @@ function Reduce() {
       </section>
 
       <section className="method__section">
-        <h3 className="method__question">
-          Count the sum of the length of everyone's name!
-        </h3>
-        <input />
-        <button onClick={handleCheckAnswer1}>Show answer</button>
-        {checkAnswer1 && (
-          <p className="method__answer">
-            friends.map(person ={">"} person.length).reduce((prev, curr) ={">"}{" "}
-            prev + curr)
-          </p>
-        )}
+        <QuestionSection
+          question="Let's sort the array in a ascending order."
+          answer="friends.map(person => person.length).reduce((prev, curr) => prev + curr)"
+          handleEnter1={handleEnter1}
+          handleCheckAnswer1={handleCheckAnswer1}
+          checkAnswer1={checkAnswer1}
+        />
       </section>
 
       <section className="method__section">
-        <h3 className="method__question">What's the return value?</h3>
-        <p className="method__hint">console.log(friends.reduce(...))</p>
-        <input />
-        <button onClick={handleCheckAnswer2}>Show answer</button>
-        {checkAnswer2 && <p className="method__answer">34</p>}
+        <ReturnValueSection
+          hint={"friends.reduce(...)"}
+          answer={JSON.stringify(
+            friends
+              .map((person) => person.length)
+              .reduce((prev, curr) => prev + curr)
+          )}
+          handleEnter2={handleEnter2}
+          handleCheckAnswer2={handleCheckAnswer2}
+          checkAnswer2={checkAnswer2}
+        />
       </section>
 
       <section className="method__section">
-        <h3 className="method__question">How does the array look like now?</h3>
-        <p className="method__hint">console.log(friends)</p>
-        <input />
-        <button onClick={handleCheckAnswer3}>Show answer</button>
-        {checkAnswer3 && (
-          <p className="method__answer">
-            ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler"]
-          </p>
-        )}
+        <ArraySection
+          answer={JSON.stringify(friends)}
+          handleEnter3={handleEnter3}
+          handleCheckAnswer3={handleCheckAnswer3}
+          checkAnswer3={checkAnswer3}
+        />
       </section>
     </div>
   );

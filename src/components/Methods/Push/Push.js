@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import ArraySection from "../../ArraySection/ArraySection";
 import Notes from "../../Notes/Notes";
+import QuestionSection from "../../QuestionSection/QuestionSection";
+import ReturnValueSection from "../../ReturnValueSection/ReturnValueSection";
 import "./Push.scss";
 
 function Push() {
@@ -45,6 +48,8 @@ function Push() {
     "Will alter the original array",
   ];
 
+  const friends = ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler"];
+
   return (
     <div className="method__container">
       <h2 className="method__title">push()</h2>
@@ -53,7 +58,7 @@ function Push() {
       </section>
 
       <section className="method__section">
-        <h3 className="method__question">
+        {/* <h3 className="method__question">
           Janice wants to join the friends squad, add her to the end of the
           array!
         </h3>
@@ -61,27 +66,51 @@ function Push() {
         <button onClick={handleCheckAnswer1}>Show answer</button>
         {checkAnswer1 && (
           <p className="method__answer">friends.push("Janice")</p>
-        )}
+        )} */}
+        <QuestionSection
+          question="Janice wants to join the friends squad, add her to the end of the array!"
+          answer='friends.push("Janice")'
+          handleEnter1={handleEnter1}
+          handleCheckAnswer1={handleCheckAnswer1}
+          checkAnswer1={checkAnswer1}
+        />
       </section>
 
       <section className="method__section">
-        <h3 className="method__question">What's the return value?</h3>
-        <p className="method__hint">console.log(friends.push("Janice"))</p>
+        {/* <h3 className="method__question">What's the return value?</h3>
+        <p className="method__hint">console.log(friends.push("..."))</p>
         <input onKeyDown={handleEnter2} />
         <button onClick={handleCheckAnswer2}>Show answer</button>
-        {checkAnswer2 && <p className="method__answer">7</p>}
+        {checkAnswer2 && (
+          <p className="method__answer">
+            {JSON.stringify(friends.push("Janice"))}
+          </p>
+        )} */}
+        <ReturnValueSection
+          hint={'friends.push("...")'}
+          answer={JSON.stringify(friends.push("Janice"))}
+          handleEnter2={handleEnter2}
+          handleCheckAnswer2={handleCheckAnswer2}
+          checkAnswer2={checkAnswer2}
+        />
       </section>
 
       <section className="method__section">
-        <h3 className="method__question">How does the array look like now?</h3>
+        {/* <h3 className="method__question">
+          How does the original array look like now?
+        </h3>
         <p className="method__hint">console.log(friends)</p>
         <input onKeyDown={handleEnter3} />
         <button onClick={handleCheckAnswer3}>Show answer</button>
         {checkAnswer3 && (
-          <p className="method__answer">
-            ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler", "Janice"]
-          </p>
-        )}
+          <p className="method__answer">{JSON.stringify(friends)}</p>
+        )} */}
+        <ArraySection
+          answer={JSON.stringify(friends)}
+          handleEnter3={handleEnter3}
+          handleCheckAnswer3={handleCheckAnswer3}
+          checkAnswer3={checkAnswer3}
+        />
       </section>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Notes from "../../Notes/Notes";
 import "../Push/Push.scss";
+import ReturnValueSection from "../../ReturnValueSection/ReturnValueSection";
 
 function Map() {
   const [checkAnswer1, setCheckAnswer1] = useState(false);
@@ -19,11 +20,19 @@ function Map() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  const handleEnter2 = (e) => {
+    if (e.key === "Enter") {
+      handleCheckAnswer2();
+    }
+  };
+
   const notes = [
     "Performs a callback function on each item",
     "Returns a new array with the results",
     "Will NOT alter the original array",
   ];
+
+  const friends = ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler"];
 
   return (
     <div className="method__container">
@@ -38,6 +47,7 @@ function Map() {
         </h3>
         <input />
         <button onClick={handleCheckAnswer1}>Show answer</button>
+
         {checkAnswer1 && (
           <p className="method__answer">
             friends.map(person ={">"} person.toUpperCase())
@@ -46,15 +56,22 @@ function Map() {
       </section>
 
       <section className="method__section">
-        <h3 className="method__question">What's the return value?</h3>
+        {/* <h3 className="method__question">What's the return value?</h3>
         <p className="method__hint">console.log(friends.map(...))</p>
         <input />
         <button onClick={handleCheckAnswer2}>Show answer</button>
         {checkAnswer2 && (
           <p className="method__answer">
-            ["RACHEL", "ROSS", "PHOEBE", "JOEY", "MONICA", "CHANDLER"]
+            {JSON.stringify(friends.map((person) => person.toUpperCase()))}
           </p>
-        )}
+        )} */}
+        <ReturnValueSection
+          hint={'friends.map("...")'}
+          answer={JSON.stringify(friends.map((person) => person.toUpperCase()))}
+          handleEnter2={handleEnter2}
+          handleCheckAnswer2={handleCheckAnswer2}
+          checkAnswer2={checkAnswer2}
+        />
       </section>
 
       <section className="method__section">
@@ -63,9 +80,7 @@ function Map() {
         <input />
         <button onClick={handleCheckAnswer3}>Show answer</button>
         {checkAnswer3 && (
-          <p className="method__answer">
-            ["RACHEL", "ROSS", "PHOEBE", "JOEY", "MONICA", "CHANDLER"]
-          </p>
+          <p className="method__answer">{JSON.stringify(friends)}</p>
         )}
       </section>
     </div>
