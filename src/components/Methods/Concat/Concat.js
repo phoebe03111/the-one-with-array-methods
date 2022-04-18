@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import ArraySection from "../../ArraySection/ArraySection";
 import Notes from "../../Notes/Notes";
-import "../Push/Push.scss";
+import QuestionSection from "../../QuestionSection/QuestionSection";
 import ReturnValueSection from "../../ReturnValueSection/ReturnValueSection";
+import "../Push/Push.scss";
 
 function Concat() {
   const [checkAnswer1, setCheckAnswer1] = useState(false);
   const [checkAnswer2, setCheckAnswer2] = useState(false);
   const [checkAnswer3, setCheckAnswer3] = useState(false);
 
+  // 1st way to show answer: click the button
   const handleCheckAnswer1 = () => {
     setCheckAnswer1((prev) => !prev);
   };
@@ -20,9 +23,22 @@ function Concat() {
     setCheckAnswer3((prev) => !prev);
   };
 
+  // 2nd way to show answer: hit "Enter"
+  const handleEnter1 = (e) => {
+    if (e.key === "Enter") {
+      handleCheckAnswer1();
+    }
+  };
+
   const handleEnter2 = (e) => {
     if (e.key === "Enter") {
       handleCheckAnswer2();
+    }
+  };
+
+  const handleEnter3 = (e) => {
+    if (e.key === "Enter") {
+      handleCheckAnswer3();
     }
   };
 
@@ -33,6 +49,7 @@ function Concat() {
   ];
 
   const friends = ["Rachel", "Ross", "Phoebe", "Joey", "Monica", "Chandler"];
+  const starwars = ["baby yoda"];
 
   return (
     <div className="method__container">
@@ -42,31 +59,19 @@ function Concat() {
       </section>
 
       <section className="method__section">
-        <h3 className="method__question">
-          The starwars group (const starwars = ["baby yoda"]) wants to hang out with friends cast. Let's have a
-          big party!
-        </h3>
-        <p className="method__hint"></p>
-        <input />
-        <button onClick={handleCheckAnswer1}>Show answer</button>
-        {checkAnswer1 && (
-          <p className="method__answer">friends.concat(starwars)</p>
-        )}
+        <QuestionSection
+          question="The starwars group (const starwars = ['baby yoda']) wants to hang out with friends cast. Let's have a big party!"
+          answer="friends.concat(starwars)"
+          handleEnter1={handleEnter1}
+          handleCheckAnswer1={handleCheckAnswer1}
+          checkAnswer1={checkAnswer1}
+        />
       </section>
 
       <section className="method__section">
-        {/* <h3 className="method__question">What's the return value?</h3>
-        <p className="method__hint">console.log(friends.concat(...))</p>
-        <input />
-        <button onClick={handleCheckAnswer2}>Show answer</button>
-        {checkAnswer2 && (
-          <p className="method__answer">
-            {JSON.stringify(friends.concat(["baby yoda"]))}
-          </p>
-        )} */}
         <ReturnValueSection
-          hint={'friends.concat("...")'}
-          answer={JSON.stringify(friends.concat(["baby yoda"]))}
+          hint='friends.concat("...")'
+          answer={JSON.stringify(friends.concat(starwars))}
           handleEnter2={handleEnter2}
           handleCheckAnswer2={handleCheckAnswer2}
           checkAnswer2={checkAnswer2}
@@ -74,15 +79,12 @@ function Concat() {
       </section>
 
       <section className="method__section">
-        <h3 className="method__question">
-          How does the original array look like now?
-        </h3>
-        <p className="method__hint">console.log(friends)</p>
-        <input />
-        <button onClick={handleCheckAnswer3}>Show answer</button>
-        {checkAnswer3 && (
-          <p className="method__answer">{JSON.stringify(friends)}</p>
-        )}
+        <ArraySection
+          answer={JSON.stringify(friends)}
+          handleEnter3={handleEnter3}
+          handleCheckAnswer3={handleCheckAnswer3}
+          checkAnswer3={checkAnswer3}
+        />
       </section>
     </div>
   );

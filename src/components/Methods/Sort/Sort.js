@@ -59,12 +59,6 @@ function Sort() {
       </section>
 
       <section className="method__section">
-        {/* <h3 className="method__question">
-          Let's sort the array in a ascending order.
-        </h3>
-        <input />
-        <button onClick={handleCheckAnswer1}>Show answer</button>
-        {checkAnswer1 && <p className="method__answer">friends.sort()</p>} */}
         <QuestionSection
           question="Let's sort the array in a ascending order."
           answer="friends.sort()"
@@ -75,15 +69,6 @@ function Sort() {
       </section>
 
       <section className="method__section">
-        {/* <h3 className="method__question">What's the return value?</h3>
-        <p className="method__hint">console.log(friends.sort())</p>
-        <input />
-        <button onClick={handleCheckAnswer2}>Show answer</button>
-        {checkAnswer2 && (
-          <p className="method__answer">
-            ['Chandler', 'Joey', 'Monica', 'Phoebe', 'Rachel', 'Ross']
-          </p>
-        )} */}
         <ReturnValueSection
           hint={"friends.sort()"}
           answer={JSON.stringify(friends.sort())}
@@ -94,15 +79,6 @@ function Sort() {
       </section>
 
       <section className="method__section">
-        {/* <h3 className="method__question">How does the array look like now?</h3>
-        <p className="method__hint">console.log(friends)</p>
-        <input />
-        <button onClick={handleCheckAnswer3}>Show answer</button>
-        {checkAnswer3 && (
-          <p className="method__answer">
-            ['Chandler', 'Joey', 'Monica', 'Phoebe', 'Rachel', 'Ross']
-          </p>
-        )} */}
         <ArraySection
           answer={JSON.stringify(friends)}
           handleEnter3={handleEnter3}

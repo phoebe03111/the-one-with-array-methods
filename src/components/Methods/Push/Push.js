@@ -87,7 +87,7 @@ function Push() {
           </p>
         )} */}
         <ReturnValueSection
-          hint={'friends.push("...")'}
+          hint='friends.push("...")'
           answer={JSON.stringify(friends.push("Janice"))}
           handleEnter2={handleEnter2}
           handleCheckAnswer2={handleCheckAnswer2}
