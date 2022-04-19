@@ -21,8 +21,8 @@ import Sort from "../../components/Methods/Sort/Sort";
 import Split from "../../components/Methods/Split/Split";
 import Join from "../../components/Methods/Join/Join";
 import Reduce from "../../components/Methods/Reduce/Reduce";
-import "./HomePage.scss";
 import Instruction from "../../components/Instructions/Instructions";
+import "./HomePage.scss";
 
 function HomePage() {
   const { method } = useParams();
