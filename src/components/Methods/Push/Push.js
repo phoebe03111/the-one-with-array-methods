@@ -53,7 +53,7 @@ function Push() {
   return (
     <div className="method__container">
       <h2 className="method__title">push()</h2>
-      <section className="method__section">
+      <section className="method__section method__notes-section">
         <Notes notes={notes} />
       </section>
 

@@ -5,7 +5,7 @@ import "./Instructions.scss";
 
 const notes = [
   "1. Select an array method from the list",
-  "2. Use the provided array (friends) to complete each exercise",
+  "2. Use the provided array above (friends) to complete each exercise",
   "3. Write your code in the input field (can copy the array by clicking the copy icon)",
   '4. Hit "Enter" or press "Show Answer" button to check your answer',
 ];
