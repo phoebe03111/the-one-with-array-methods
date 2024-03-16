@@ -15,4 +15,4 @@ React, Sass
 
 ## Demo
 
-[https://bloom-express-eight.vercel.app/](https://the-one-with-the-array-methods.netlify.app/)https://the-one-with-the-array-methods.netlify.app/
+https://the-one-with-the-array-methods.netlify.app/
